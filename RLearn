@@ -1,6 +1,36 @@
 
-一、安装拓展包
+一、安装拓展包 与 加载包
 
 	install.packages("foreign")
 
+	library(foreign)
+
+二、R的基本语法
+
+	1) 常用函数
+		getwd() 显示当前的工作目录
+		setwd("mydirectory") 修改当前的工作目录为mydirectory
+		ls() 列出当前工作空间中的对象
+		rm(objectlist) 移除（删除）一个或多个对象
+		help(options) 显示可用选项的说明
+		options() 显示或设置当前选项
+		history(#) 显示最近使用过的#个命令（默认值为25）
+		savehistory("myfile") 保存命令历史到文件myfile中（默认值为.Rhistory）
+		loadhistory("myfile") 载入一个命令历史文件（默认值为.Rhistory）
+		save.image("myfile") 保存工作空间到文件myfile中（默认值为.RData）
+		save(objectlist, file="myfile") 保存指定对象到一个文件中
+		load("myfile") 读取一个工作空间到当前会话中（默认值为.RData）
+		q() 退出R。将会询问你是否保存工作空间
 	
+
+	2) 语法
+		
+		2.1 命令行执行R脚本：R CMD BATCH --args Test.R
+			
+			执行的过程会输出到同名的 ".Rout" 文件中。
+
+		Rscript Test.R
+	
+		2.2 R使用 <-，而不是传统的 = 作为赋值符号
+
+		
